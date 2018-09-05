@@ -1,0 +1,99 @@
+3.互动应用3.0现网：（评论，点赞，弹幕目前都是使用这一套）（老app）
+		http://180.168.71.6:8000/interaction/interaction-service3.0.git
+		fengwei@wondertek.com.cn  fengwei901205
+		nigx:  
+		10.200.30.11:80
+
+
+10.200.53.44：
+apache  stop  80端口，
+tomcat启动，  8080端口
+curl ""
+
+apache  start
+
+
+
+		IP：	10.200.43.222(job)	10.200.53.44 (公用apache)
+			10.200.43.223		10.200.53.45
+			10.200.43.224		10.200.53.46
+			10.200.43.225		10.200.53.49
+								
+		
+
+		ansible: V#wdtke!33
+		sudo su -
+		数据库：10.200.22.21            172.16.8.73（OMS）   172.16.3.107（MV2）  10.200.48.242/10.200.48.96（gk）
+				ansible:V#wdtke!33
+				sudo su -
+				su - oracle
+				username:INTERACTION_NEW
+				password:INTERACTION_NEW_2o15
+				
+		redis: 10.200.43.229:6379,10.200.43.230:6379,10.200.43.231:6379,10.200.43.223:6379,10.200.43.224:6379,10.200.43.225:6379
+			   ansible:V#wdtke!33
+			   sudo su -
+			   
+			   
+	4. interaction3.0预览（老app）
+
+		服务端(包含互动和用户中心) 10.200.86.95    -version  2wsx@WSX root 1qaz!QAZ  数据库 10.200.86.81  INTERACTION/INTERACTION
+		管理端(包含互动和用户中心) 10.200.43.228   -ansible  V#wdtke!33
+		redis 10.200.86.95(/usr/local/redis-3.0.7/src) redis客户端
+		数据库使用的是 10.200.86.81
+		INTERACTION / INTERACTION
+
+
+
+
+Oracle数据库：
+ssh ansible@10.200.22.21 
+V#wdtke!33
+sudo su -
+su - oracle
+sqlplus INTERACTION_NEW/INTERACTION_NEW_2o15
+select t.table_name from user_tables t;
+select M_ID,COMMENTID,CONTENT_TYPE ,CONTENT_ID, STATUS from COMMENT_INFO where USER_ID=1021172359;
+
+
+
+
+
+===============================
+interaction-admin-3.0
+管理平台
+
+http://180.168.71.6:8000/interaction/interaction-admin-3.0.git
+
+账户/密码
+gengxiaojie/password
+
+服务器：
+ansible V#wdtke!33
+
+互动管理平台：
+	1、互动管理平台1.0(从来没用过)
+		IP:IP:172.16.3.111-112-112
+		root/#Yy2012!
+		
+		数据库：据库：172.16.3.107
+		
+
+		
+		
+	2、互动管理平台admin_2.0
+		
+		http://180.168.71.6:8000/interaction/interaction-admin-3.0.git   gengxiaojie/password
+		
+		IP：IP：172.16.3.150
+		a
+		ansible V#wdtke!33
+		sudo su -
+		数据库：据库：172.16.4.33  10  3  10.200.22.21(int(interaction) 
+		
+		现网外网地址：
+		http://221.181.100.37:8082/interaction-neadmin/main.html;jsessionid=7B927D7ABE02228C2647964F356E46F8
+		
+
+		http://221.181.100.37:8082/interaction-neadmin/main.html;  （用  （用户名/密码：wwwdev/4rfv$RFV）
+
